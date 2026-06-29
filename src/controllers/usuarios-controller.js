@@ -6,14 +6,25 @@ const router = Router();
 const svc = new usuariosService();
 
 
-router.get('', async (req, res) => {
+router.get('/api/publicaciones', async (req, res) => {
 const entidadArray = await svc.getAll();
 return res.status(StatusCodes.OK).json(entidadArray);
 }); 
-router.put('/:id', async (req, res) => {
-let id = req.params.id;
-let entidad = req.body;
-const registrosAfectados = await svc.update(id, entidad);
-return res.status(StatusCodes.OK).json(registrosAfectados); 
-});
+
+
+router.post('/api/auth/register', async(req,res)) =>{
+
+}
+
+router.post('/api/auth/login', async(req,res)) =>{
+    
+}
+
+
+
+
+
+
+
+
 export default router;

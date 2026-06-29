@@ -10,6 +10,8 @@ router.get('', async (req, res) => {
 const entidadArray = await svc.getAll();
 return res.status(StatusCodes.OK).json(entidadArray);
 }); 
+
+
 router.put('/:id', async (req, res) => {
 let id = req.params.id;
 let entidad = req.body;
